@@ -1,6 +1,7 @@
 {
   "name": "tealium-import-datalayer",
   "version": "1.0.0",
+  "repository": "https://github.com/fiann/tealium-import-datalayer",
   "description": "Tealium data capture extension",
   "main": "index.js",
   "directories": {
@@ -8,7 +9,7 @@
   },
   "scripts": {
     "start": "node index.js",
-    "test": "mocha-phantomjs test/import-datalayer-test.html"
+    "test": "./node_modules/.bin/mocha-phantomjs test/import-datalayer-test.html"
   },
   "author": "Fiann O'Hagan",
   "devDependencies": {
