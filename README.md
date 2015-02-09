@@ -1,8 +1,6 @@
 ![Tealium logo](tealium-logo.png)
 
-# Tealium Import Data Layer extension
-
-[![Build Status](https://travis-ci.org/fiann/tealium-import-datalayer.svg?branch=master)](https://travis-ci.org/fiann/tealium-import-datalayer)
+# Tealium Import Data Layer extension [![Build Status](https://travis-ci.org/fiann/tealium-import-datalayer.svg?branch=master)](https://travis-ci.org/fiann/tealium-import-datalayer)
 
 This Tealium extension captures data from existing JavaScript objects in the page.
 
@@ -177,10 +175,20 @@ priority over the SiteCatalyst data.
 
 ## Running the tests
 
-If you want to run the tests or contribute to the extension code, there is a simple web server
-in Node.js:
+You can run the tests from the command line using [Mocha-PhantomJS](http://metaskills.net/mocha-phantomjs/)
+
+```
+  npm install
+  npm test
+```
+
+Alternatively, if you want to run the tests or contribute to the extension code, there 
+is a simple web server in Node.js:
 
 ```
   npm install
   npm start
 ```
+
+This gives you LiveReload functionality so the test page will reload by magic whenever
+save the files.
