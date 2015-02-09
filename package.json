@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "finalhandler": "^0.3.3",
+    "livereload": "^0.3.6",
     "serve-static": "^1.8.1"
   }
 }
