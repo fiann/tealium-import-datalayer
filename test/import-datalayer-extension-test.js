@@ -14,9 +14,9 @@
 
 // Make sure namespace exists
 window.utag_extn = window.utag_extn || {};
-window.utag_extn.capture_datalayer = window.utag_extn.capture_datalayer || {};
-window.utag_extn.capture_datalayer.config = window.utag_extn.capture_datalayer.config || {};
-var config = window.utag_extn.capture_datalayer.config;
+window.utag_extn.import_datalayer = window.utag_extn.import_datalayer || {};
+window.utag_extn.import_datalayer.config = window.utag_extn.import_datalayer.config || {};
+var config = window.utag_extn.import_datalayer.config;
 
 // Test code
 describe("The 'Capture Data Layer' extension", function() {
@@ -192,7 +192,7 @@ describe("The 'Capture Data Layer' extension", function() {
       var config = {
         page_name : "s.pageName"
       };
-      utag_data = utag_extn.capture_datalayer.process(config, utag_data);
+      utag_data = utag_extn.import_datalayer.process(config, utag_data);
       expect(utag_data.page_name).to.equal("utag_data:Homepage");
 
 */
@@ -215,8 +215,8 @@ function capture_and_validate(data_sources, expected_data) {
     page_data[variable_name] = window[variable_name];
   }
   // 3) Run the scraping
-  var process = utag_extn.capture_datalayer.process;
-  expect(process).to.be.a("function", "utag_extn.capture_datalayer.process() is not defined");
+  var process = utag_extn.import_datalayer.process;
+  expect(process).to.be.a("function", "utag_extn.import_datalayer.process() is not defined");
   var actual_data = process(config, window.utag_data);
   window.utag_data = actual_data;
   expect(actual_data).to.be.an("object", "utag_data should be an object");
