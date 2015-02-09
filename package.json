@@ -1,0 +1,21 @@
+{
+  "name": "capture-datalayer",
+  "version": "1.0.0",
+  "description": "Tealium data capture extension",
+  "main": "pageData-w3.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test/capture-datalayer-extension-test.js"
+  },
+  "author": "Fiann O'Hagan",
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "mocha": "^2.1.0"
+  },
+  "dependencies": {
+    "finalhandler": "^0.3.3",
+    "serve-static": "^1.8.1"
+  }
+}
