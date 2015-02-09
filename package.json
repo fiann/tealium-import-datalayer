@@ -8,12 +8,14 @@
   },
   "scripts": {
     "start": "node index.js",
-    "test": "mocha test/import-datalayer-extension-test.js"
+    "test": "mocha-phantomjs test/import-datalayer-test.html"
   },
   "author": "Fiann O'Hagan",
   "devDependencies": {
     "chai": "^1.10.0",
-    "mocha": "^2.1.0"
+    "mocha": "^2.1.0",
+    "mocha-phantomjs": "^3.5.3",
+    "phantomjs": "^1.9.15"
   },
   "dependencies": {
     "finalhandler": "^0.3.3",
