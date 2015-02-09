@@ -1,4 +1,4 @@
-[tealium-logo.png]
+![Tealium logo](tealium-logo.png)
 
 # Tealium Import Data Layer extension
 
