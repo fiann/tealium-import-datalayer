@@ -22,7 +22,9 @@ var server = http.createServer(function(req, res){
 // Listen 
 server.listen(3000);
 console.log("Server started on http://localhost:3000/");
+console.log("Try opening http://localhost:3000/test/import-datalayer-test.html");
 
 var livereload = require("livereload");
 server = livereload.createServer();
 server.watch(__dirname);
+console.log("Livereload server running");

@@ -1,13 +1,14 @@
 {
-  "name": "capture-datalayer",
+  "name": "tealium-import-datalayer",
   "version": "1.0.0",
   "description": "Tealium data capture extension",
-  "main": "pageData-w3.js",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "mocha test/capture-datalayer-extension-test.js"
+    "start": "node index.js",
+    "test": "mocha test/import-datalayer-extension-test.js"
   },
   "author": "Fiann O'Hagan",
   "devDependencies": {

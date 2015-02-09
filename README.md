@@ -1,4 +1,6 @@
-# Tealium Capture Data Layer extension
+[tealium-logo.png]
+
+# Tealium Import Data Layer extension
 
 This Tealium extension captures data from existing JavaScript objects in the page.
 
@@ -14,10 +16,10 @@ You will need two parts: the code library, and a configuration block.
 
 Create a JavaScript Code extension in your Tealium profile to hold the configuration.
 
-The basic configuration is in the `utag_extn.capture_datalayer` namespace and looks like this:
+The basic configuration is in the `utag_extn.import_datalayer` namespace and looks like this:
 
 ```javascript
-  utag_extn.capture_datalayer.config = {
+  utag_extn.import_datalayer.config = {
     data_layer_name : ["s.variableName"],
     // .. more fields ..
   };
@@ -28,7 +30,7 @@ There is more information about the configuration required below.
 **Step 2: Install code library**
 
 Copy the source code for the extension, which is in 
-[capture-datalayer-extension.js](./lib/capture-datalayer-extension.js)
+[import-datalayer-extension.js](./lib/import-datalayer-extension.js)
 and add it to your Tealium profile as JavaScript Code extension. This must go *after* the
 configuration: remember you can drag-and-drop to reorder extensions.
 
@@ -62,7 +64,7 @@ You would need to have this in the mapping table:
 Then the configuration will look like this:
 
 ```javascript
-  utag_extn.capture_datalayer.config = {
+  utag_extn.import_datalayer.config = {
     page_name : ["s.pageName"],
     page_category : ["s.prop1"]
   };
@@ -78,7 +80,7 @@ variable is not set on some pages, you might want to capture the document title 
 this case, the configuration would look like this:
 
 ```javascript
-  utag_extn.capture_datalayer.config = {
+  utag_extn.import_datalayer.config = {
     page_name : ["s.pageName", "document.title"],
     page_category : ["s.prop1"]
   };
@@ -120,7 +122,7 @@ The data in first example would look like this in W3C format:
 And you could collect it like this:
 
 ```javascript
-  utag_extn.capture_datalayer.config = {
+  utag_extn.import_datalayer.config = {
     page_name : ["digitalData.page.pageInfo.pageID"],
     page_category : ["digitalData.page.category.primaryCategory"]
   };
@@ -136,7 +138,7 @@ object to a W3C format data layer, This configuration captures the W3 format dat
 is present in the page. If not, the variable will be populated from SiteCat.
 
 ```javascript
-  utag_extn.capture_datalayer.config = {
+  utag_extn.import_datalayer.config = {
     page_name : ["digitalData.page.pageInfo.pageID", "s.pageName"],
     page_category : ["digitalData.page.category.primaryCategory", "s.prop1"]
   };
@@ -161,7 +163,7 @@ code will not overwrite existing values in the UDO if they are already set.
 If you have this configuration to capture your SiteCatalyst data:
 
 ```javascript
-  utag_extn.capture_datalayer.config = {
+  utag_extn.import_datalayer.config = {
     page_name : ["s.pageName", "document.title"],
     page_category : ["s.prop1"]
   };
