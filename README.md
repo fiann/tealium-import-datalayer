@@ -2,6 +2,8 @@
 
 # Tealium Import Data Layer extension
 
+[![Build Status](https://travis-ci.org/fiann/tealium-import-datalayer.svg?branch=master)](https://travis-ci.org/fiann/tealium-import-datalayer)
+
 This Tealium extension captures data from existing JavaScript objects in the page.
 
 You may find this useful if you are deploying Tealium (or other data solutions) on 
