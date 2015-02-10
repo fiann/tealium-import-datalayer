@@ -7,7 +7,7 @@
 
     <title>Tests for Import Data Layer extension</title>
     <link rel="stylesheet" href="assets/mocha.css">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/bootstrap.min.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -59,10 +59,10 @@
     <script src="import-datalayer-extension-test.js"></script>
     <script>
       if (window.mochaPhantomJS) { mochaPhantomJS.run(); }
-      else { mocha.run(); }
+      else {
+        mocha.run();
+        document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+      }
     </script>
-
-    <!-- LiveReload for the win! -->
-    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
   </body>
 </html>
