@@ -135,7 +135,7 @@ describe("The 'Capture Data Layer' extension", function() {
             sku: "sku23456",
             manufacturer: "Nikon"
           }
-        }],
+        }]
       };
     });
     it("uses the format 'digitalData.color[]' to select data from an array of strings", function() {
