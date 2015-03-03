@@ -8,19 +8,10 @@
     "test": "test"
   },
   "scripts": {
-    "start": "node index.js",
-    "test": "./node_modules/.bin/mocha-phantomjs test/import-datalayer-test.html"
+    "start": "node node_modules/tealium-extension-tester/index.js",
+    "test": "node node_modules/tealium-extension-tester/run-tests.js"
   },
   "author": "Fiann O'Hagan",
-  "devDependencies": {
-    "chai": "^1.10.0",
-    "mocha": "^2.1.0",
-    "mocha-phantomjs": "^3.5.3",
-    "phantomjs": "^1.9.15"
-  },
-  "dependencies": {
-    "finalhandler": "^0.3.3",
-    "livereload": "^0.3.6",
-    "serve-static": "^1.8.1"
-  }
+  "devDependencies": {},
+  "dependencies": {}
 }
